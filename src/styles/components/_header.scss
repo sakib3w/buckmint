@@ -308,61 +308,6 @@
               }
             }
           }
-          // notification css
-          // .notification {
-          //   position: relative;
-          //   @include dropdown();
-          //   @include scrolling();
-          //   @include breakpoints(tablet) {
-          //     right: -58px;
-          //   }
-          //   ul {
-          //     list-style: none;
-          //     .header {
-          //       border-bottom: $border-header;
-          //       h4 {
-          //         padding: 20px;
-          //         color: $text-default-color;
-          //         text-transform: capitalize;
-          //       }
-          //     }
-          //     li {
-          //       display: flex;
-          //       padding: 10px;
-          //       align-items: center;
-          //       cursor: pointer;
-          //       border-bottom: $border-header;
-          //       &:last-child {
-          //         border: none;
-          //       }
-          //       &:hover {
-          //         background-color: $bg-sidebar-hover;
-          //       }
-          //       .image {
-          //         margin-right: 10px;
-          //         svg {
-          //           font-size: 20px;
-          //           color: #fff;
-          //           background: $bg-success-linear-gradient;
-          //           box-shadow: $box-shadow-success;
-          //           padding: 12px;
-          //           border-radius: 50px;
-          //         }
-          //       }
-
-          //       .notification_content {
-          //         h2 {
-          //           font-size: 13px;
-          //           margin-bottom: 8px !important;
-          //         }
-          //         p {
-          //           font-size: 12px;
-          //           color: #76839a;
-          //         }
-          //       }
-          //     }
-          //   }
-          // }
           .backdrop {
             @include breakpoints(largeMobile) {
               background: rgba(0, 0, 0, 0.18) !important;
