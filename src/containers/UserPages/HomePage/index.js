@@ -89,6 +89,9 @@ const HomePage = () => {
     },
   ];
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
 
   return (
     <div className="rf_homPage_wrapper" id="pddfff">
@@ -115,7 +118,7 @@ const HomePage = () => {
         modalRef={modalRef}
       >
         <div className="rf_commol_modal_field">
-          <form >
+          <form onSubmit={handleSubmit}>
             <div className="form_group">
               <Input
                 label="Serial Number"

@@ -3,7 +3,7 @@ import { RiArrowDropRightLine } from "react-icons/ri";
 import CustomLink from "../Link";
 import { useBreakpoints } from "react-device-breakpoints";
 
-const MenuAccordion = ({ d, sideBarShow, logout, userRole }) => {
+const MenuAccordion = ({ d, sideBarShow }) => {
   const [collapse, setCollapse] = useState(false);
   const toggle = (index) => {
     if (collapse === index) {

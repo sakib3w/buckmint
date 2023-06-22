@@ -24,6 +24,10 @@ const AddSerialNumber = () => {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <div className="rf_homPage_wrapper" id="pddfff">
       <div className="rf_section_title for_download_handle">
@@ -38,7 +42,7 @@ const AddSerialNumber = () => {
           borderRadius: "10px",
         }}
       >
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form_group">
             <Input
               label="Serial Number"

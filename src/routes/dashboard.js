@@ -9,7 +9,6 @@ const Dashboard = () => {
   const [show, setShow] = useState(true);
   return (
     <>
-      {/* <BrowserRouter> */}
       <div className="home_wrapper" show-menu={show ? "false" : "true"}>
         {/* sidebar */}
         <div className="sidebar_wrapper">
@@ -51,7 +50,6 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      {/* </BrowserRouter> */}
     </>
   );
 };

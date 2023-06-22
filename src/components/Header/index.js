@@ -1,26 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
-// import { AiOutlineSearch } from "react-icons/ai";
-// import { BsSun } from "react-icons/bs";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { FiSun } from "react-icons/fi";
 import { MdOutlineDarkMode } from "react-icons/md";
 import avatar from "../../assets/avatar.png";
-import logoDark from "../../assets/logo.png";
-import logoLight from "../../assets/logo.png";
 import logo from "../../assets/logo1.png";
-// import Input from "../Input";
 import Popover from "../Popover";
 import AvatarDropdownMenu from "./avatarDropdownMenu";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
-// import { useDispatch } from "react-redux";
 import { useClickOutside } from "../../hooks/useClickOutside";
-// import themeSlice from "../../Services/themeSlice";
 import {
   getLocalStorage,
   removeLocalStorage,
 } from "../../utils/function/localStorage";
-import { useGetLoginUserQuery } from "../../Services/userApi";
+
 const Header = ({ show, setShow }) => {
   // avater clckable menu
   const profileRef = useRef(null);
@@ -34,10 +27,8 @@ const Header = ({ show, setShow }) => {
   const handleThemeMode = () => {
     if (value === "dark") {
       setValue("light");
-      // dispatch(themeSlice({type: "THEME", payload: "light"}));
     } else {
       setValue("dark");
-      // dispatch(themeSlice({type: "THEME", payload: "dark"}));
     }
   };
 
@@ -55,8 +46,6 @@ const Header = ({ show, setShow }) => {
     removeLocalStorage("rf_token");
     window.location.reload();
   };
-  // get user
-  const { data } = useGetLoginUserQuery();
   return (
     <div className="rf_header_wrapper">
       <div className="container">
@@ -89,10 +78,9 @@ const Header = ({ show, setShow }) => {
                   </button>
                 </div>
               </li>
-              {/* <li>{value === "dark" ? "dark" : "light"}</li> */}
               <li ref={profileRef} className="rf_header_menu_list">
                 <img
-                  src={data?.data?.avatar ? data?.data?.avatar : avatar}
+                  src={avatar}
                   alt="user_pic"
                   onClick={() => setOpenMenu(!openMenu)}
                 />
@@ -100,7 +88,6 @@ const Header = ({ show, setShow }) => {
                   <AvatarDropdownMenu
                     setOpenMenu={setOpenMenu}
                     logout={handleLogout}
-                    data={data?.data}
                   />
                 </Popover>
               </li>
