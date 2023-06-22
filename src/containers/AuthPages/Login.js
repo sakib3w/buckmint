@@ -72,25 +72,7 @@ const Login = () => {
               <Button type="submit" className="submit_btn">
                 Login
               </Button>
-              <div className="go_to_register">
-                <p>
-                  <CustomLink href="/" className="log_page_nav_link">
-                    Home
-                  </CustomLink>{" "}
-                </p>
-                <p className="login_nav_break_point"> | </p>
-                <p>
-                  <CustomLink href="/" className="log_page_nav_link">
-                    Register
-                  </CustomLink>{" "}
-                </p>
-                <p className="login_nav_break_point"> | </p>
-                <p>
-                  <CustomLink href="/" className="log_page_nav_link">
-                    Forget Password
-                  </CustomLink>{" "}
-                </p>
-              </div>
+            
             </form>
           </div>
         </AuthCardLayout>
