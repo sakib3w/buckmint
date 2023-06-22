@@ -37,7 +37,6 @@ const Login = () => {
             <h2>Login</h2>
           </div>
           <div className="hr_border"></div>
-          {/* <SocialIconForCardHearder /> */}
           <div className="rf_dashboard_login_content">
             <form onSubmit={handleSubmit}>
               <div className="form_group" style={{ display: "inherit" }}>
