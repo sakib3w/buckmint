@@ -1,28 +1,16 @@
 import React, { useState, useRef } from "react";
-
 import Input from "../../../components/Input";
 import Button from "../../../components/Button";
-
-// import TeamTopup from "./table/TeamTopup";
-// import RoiInocmeTable from "./table/RoiIncomeTable";
-import { popupShow } from "../../../containers/AuthPages/Login";
 import Modal from "../../../components/Modal";
 import { useClickOutside } from "../../../hooks/useClickOutside";
 import SectionCommonTable from "../../../components/SectionCommonTable";
 import DashboardTable from "./table/dashboardTable";
 
 const HomePage = () => {
-  const [openModalForImage, setOpenModalForImage] = useState(popupShow);
-  const modalImageRef = useRef(null);
-  useClickOutside(modalImageRef, () => setOpenModalForImage(false));
-
   // modal toggle
   const [openModal, setOpenModal] = useState(false);
   const modalRef = useRef(null);
   useClickOutside(modalRef, () => setOpenModal(false));
-  // get all member list
-
-  // blocked member
 
   // handle change
   const [values, setValues] = useState({});
@@ -32,6 +20,7 @@ const HomePage = () => {
       [e.target.name]: e.target.value,
     });
   };
+  
   // update member
   const registryHandler = (body) => {
     setValues(body);
@@ -109,7 +98,7 @@ const HomePage = () => {
       <SectionCommonTable
         wrapperClassName="allmember_table"
         cardStyle={{ backgroundColor: "#fff" }}
-        sectionTableTitle={`Dashboard (0)`}
+        sectionTableTitle={`All Serial Numbers ${data?.length}`}
         data={data}
         setFilterData={setFilterData}
         table={
@@ -126,7 +115,7 @@ const HomePage = () => {
         modalRef={modalRef}
       >
         <div className="rf_commol_modal_field">
-          <form /* onSubmit={handleEdit} */>
+          <form >
             <div className="form_group">
               <Input
                 label="Serial Number"

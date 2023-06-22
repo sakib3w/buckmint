@@ -11,7 +11,7 @@ const SectionCommonTable = ({
   table,
   data,
   setFilterData,
-
+  sectionTableTitle,
 }) => {
   const [search, setSearch] = useState("");
   useEffect(() => {
@@ -35,22 +35,26 @@ const SectionCommonTable = ({
     <div className={`rf_sectiontable_wrapper ${wrapperClassName}`}>
       <CardLayout style={cardStyle} className="rf_sectiontable_card">
         <div className="rf_sectiontable_title">
-
+          <div className="rf_sectiontable_title_container">
+            <h2>{sectionTableTitle}</h2>
+          </div>
           {countContainer && (
             <div className="rf_sectiontable_balance">
               <h2>{countContainer}</h2>
             </div>
           )}
-          {/* {setSelectOption && selectOptions && ( */}
-            {/* <Select
+
+          {/* {setSelectOption && selectOptions && (
+           <Select
               className="select_field"
               value={""}
               name="status"
               onChange={setSelectOption}
               options={selectOptions}
               isRequired={true}
-            /> */}
-          {/* )} */}
+            />
+          )} */}
+
           {/* {data && headers && (
             <CSVLink
               className="downloadCSV_button"
