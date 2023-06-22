@@ -1,0 +1,92 @@
+@import "../../../responsive/breakpoints";
+@import "../../../abstract/variables";
+// entire file global css
+.card_heading {
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+  color: $text-p-color;
+  padding-top: 15px !important;
+  h2 {
+    font-size: 15px;
+    text-align: left;
+    color: $text-p-color;
+    text-transform: uppercase;
+    margin-bottom: 10px !important;
+    position: relative;
+    margin-left: 20px !important;
+    font-weight: 500 !important;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 83%;
+      background: $text-menu-active-color;
+      top: 3px;
+      left: -8px;
+      bottom: 0;
+    }
+  }
+  p {
+    font-size: 16px;
+    color: $text-default-color;
+    span {
+      color: red !important;
+    }
+  }
+}
+.rf_homPage_wrapper {
+  transition: all 0.3s ease-in-out;
+  .rf_section_title {
+    h2 {
+      font-size: 20px;
+      color: $text-p-color;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .addSerialNumber-btn {
+    background: #668d7d;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px #c4cdeb;
+    box-shadow: $box-shadow-sidebar-menu;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px 8px;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    &:hover {
+      background-color: #5c776c;
+      box-shadow: 0 5px 5px 0 rgb(82 63 105 / 5%);
+    }
+  }
+
+  .custom_modal {
+    // height: auto !important;
+    width: 40% !important;
+    min-height: 60% !important;
+    @include breakpoints(portraitTablet) {
+      width: 70% !important;
+    }
+    @include breakpoints(largeMiniMobile) {
+      width: 85% !important;
+    }
+  }
+}
+
+.rf_commol_modal_field {
+  .submit_button {
+    .btn {
+      width: 200px;
+      background-color: #668d7d;
+      &:hover {
+        background-color: #5c776c;
+        box-shadow: 0 5px 5px 0 rgb(82 63 105 / 5%);
+      }
+    }
+  }
+}
